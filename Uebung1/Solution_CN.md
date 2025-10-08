@@ -112,3 +112,46 @@
 7. 他的reduced switching table就是RS latch的truth table
 
 8. 这里的$^n{Q}$ 代表着new Q state, $^a{Q}$ 代表着 old Q state
+
+## Task 1.5
+1. 对于Task a如图所示，首先JK-Flipflop可以由两个3 inputs NAND gates和一个RS latch组成。
+2. 当clk = 0，R and S 都被set为1，$^n{Q} =\ ^a{Q}, $
+3. 当clk 在信号上升沿从0到1时，输出$^n{Q}$值由输入信号J和K决定。
+4. 从他的switching table我们可以看到具体变化
+5. 在这个switching table中，除去不考虑clk外，有四个输入信号$\overline{^a{Q}}, ^a{Q}, J, K$, 两个中间信号$R, S$ 和两个输出信号 $^n{Q}, \overline{^n{Q}}$
+6. 四个输入信号对应着8种信号组合...
+7. 每种信号组合对应的RS信号组合为...
+8. 最后根据$R, S, \overline{^a{Q}}, ^a{Q}$确定对应的输出$^n{Q}, \overline{^n{Q}}
+9. 对于Task b，由switching table可知:
+    + 当 JK = 00时，$^n{Q} = ^a{Q}$
+    + 当 JK = 01时，$^n{Q} = 0$
+    + 当 JK = 10时，$^n{Q} = 1$
+    + 当 JK = 11时，$^n{Q} = \overline{^a{Q}}$
+
+## Task 1.6
+1. 根据电容器的电容公式 $Q = CV$ 和电流公式$I = dQ/dt$:
+    $$I = dQ/dt = CdV/dt = C \Delta V / \Delta t = ...$$
+
+## Task 1.7
+1. 我们把the voltage at the capacitor 看作 $V_{out}$
+2. 根据KVL 和 电流公式 $I = CdV/dt$
+    + $$V_{in} = IR + V_{out} \\ = RCdV_{out}/dt + V_{out}$$
+    + $$\frac{V_{in}-V_{out}}{R} = C \frac{dV_{out}}{dt}$$
+    + $$dt = RC \frac{dV_{out}}{V_{in}-V_{out}}$$
+    + 所有的到积分公式：$$\int_{0}^{t} dt = RC \int_{0}^{V_{out}}\frac{dV_{out}}{V_{in}-V_{out}}$$
+    + $$t = RC \ln(V_{in}-V_{out})\big|_0^{V_{out}}$$
+    + $$t = -RC \ln\frac{V_{in}-V_{out}}{V_{in}}$$
+
+## Task 1.8
+1. 对于问题a，我们看作$V_{in} = V_{DD}$, $V_{out}$是capacitor上的电压
+2. 得到和Task 1.7 一样的RC电路，所以直接套用公式：$$t = -RC \ln\frac{V_{in}-V_{out}}{V_{in}} \\ = -R_1C_L \ln\frac{V_{DD}-V_{DD}/2}{V_{DD}} \\ = R_1C_L \ln 2$$
+3. 对于问题b, 看作$V_{in} = V_{DD}$,是capacitor上面的电压，$V_{out}$是电阻$R_2$上的电压
+4. 根据电容器放电电流公式$I = -C dV_{out}/dt$ 以及 KCL:
+$$-C_L \frac{dV_{out}}{dt} = \frac{V_{out}}{R_2} \\ \to dt = -R_2C_L \frac{dV_{out}}{V_{out}} $$
+5. 两边积分得到：
+$$\int_0^tdt = -R_2C_L\int_{V_{DD}}^{V_{out}}\frac{dV_{out}}{V_{out}} \\\to t = -R_2C_L\ln V_{out}\big|_{V_{DD}}^{V_{out}} \\ = - R_2 C_L \ln \frac{V_{out}}{V_{DD}}$$
+6. 因为 $V_{out} = 1/2 V_{DD}$ 所以 $$t = R_2C_L \ln 2$$
+7. the ratio of the two delays from a and b is: $$\frac{R_1C_L \ln 2}{R_2C_L \ln 2} = \frac{R_1}{R_2}$$
+
+## Task 1.9 & 1.10
+1. 这两道题都是简单的数学问题，请自己理解并参考官方参考答案，如有问题，请发邮件给我或者我的同事。
