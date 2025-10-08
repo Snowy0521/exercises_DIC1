@@ -125,3 +125,76 @@
 
 8. Notation: $^n{Q}$ bezeichnet den **neuen Q-Zustand**, während $^a{Q}$ den **alten Q-Zustand** bezeichnet.
 
+## Aufgabe 1.5
+
+1. Für **Aufgabe (a)** (wie in der Abbildung gezeigt) kann das JK-Flipflop aus zwei NAND-Gattern mit drei Eingängen und einem RS-Latch aufgebaut werden.
+2. Wenn **clk = 0**, werden sowohl **R** als auch **S** auf 1 gesetzt, und $^n{Q} =\ ^a{Q}$.
+3. Wenn **clk** an der steigenden Flanke von 0 auf 1 wechselt, wird der Ausgang $^n{Q}$ durch die Eingangssignale **J** und **K** bestimmt.
+4. Die genauen Zustandsänderungen sind in der **Schaltfolgetabelle (switching table)** zu sehen.
+5. In dieser Tabelle (ohne **clk**) gibt es vier Eingangssignale: $\overline{^a{Q}},\ ^a{Q},\ J,\ K$; zwei Zwischensignale: **R**, **S**; und zwei Ausgangssignale: $^n{Q},\ \overline{^n{Q}}$.
+6. Die vier Eingangssignale ergeben acht mögliche Signalkombinationen.
+7. Jede dieser Kombinationen entspricht einer bestimmten **R-S**-Kombination.
+8. Am Ende werden die entsprechenden Ausgänge $^n{Q}$ und $\overline{^n{Q}}$ von **R**, **S**, $\overline{^a{Q}}$ und $^a{Q}$ bestimmt.
+9. Für **Aufgabe (b)** gilt laut Schaltwerktabelle:
+   * Wenn **JK = 00**, $^n{Q} =\ ^a{Q}$
+   * Wenn **JK = 01**, $^n{Q} = 0$
+   * Wenn **JK = 10**, $^n{Q} = 1$
+   * Wenn **JK = 11**, $^n{Q} = \overline{^a{Q}}$
+
+## Aufgabe 1.6
+1. Nach den Gleichungen eines Kondensators für Ladung und Strom gilt:
+   $$Q = C V \quad \text{und} \quad I = \frac{dQ}{dt}$$
+   Daher:
+   $$I = \frac{dQ}{dt} = C \frac{dV}{dt} = C \frac{\Delta V}{\Delta t} = \dots$$
+
+## Aufgabe 1.7
+1. Die Spannung am Kondensator wird als $V_{out}$ betrachtet.
+2. Nach dem KVL und der Stromgleichung des Kondensators $I = CdV/dt$
+    + $$V_{in} = IR + V_{out} \\ = RCdV_{out}/dt + V_{out}$$
+    + $$\frac{V_{in}-V_{out}}{R} = C \frac{dV_{out}}{dt}$$
+    + $$dt = RC \frac{dV_{out}}{V_{in}-V_{out}}$$
+    + Durch Integration beider Seiten ergibt sich: $$\int_{0}^{t} dt = RC \int_{0}^{V_{out}}\frac{dV_{out}}{V_{in}-V_{out}}$$
+    + $$t = RC \ln(V_{in}-V_{out})\big|_0^{V_{out}}$$
+    + $$t = -RC \ln\frac{V_{in}-V_{out}}{V_{in}}$$
+
+## Aufgabe 1.8
+
+1. Für Aufgabe (a) setzen wir $V_{in}=V_{DD}$. Sei $V_{out}$ die Spannung über dem Kondensator $C_L$.
+
+2. Dies ist dasselbe RC-Schaltung wie in Aufgabe 1.7, daher verwenden wir die Formel:
+   $$
+   t = -RC\ln\frac{V_{in}-V_{out}}{V_{in}}
+   $$
+   Setzen wir $V_{in}=V_{DD}$ und den Zielwert $V_{out}=V_{DD}/2$ ein:
+   $$
+   t = -R_1 C_L \ln\frac{V_{DD}-V_{DD}/2}{V_{DD}} = -R_1 C_L \ln\frac{1}{2} = R_1 C_L \ln 2.
+   $$
+
+3. Für Aufgabe (b) betrachten wir den Kondensator, der zunächst auf $V_{DD}$ aufgeladen ist. Sei $V_{out}$ die Spannung über dem Widerstand $R_2$, während der Kondensator über $R_2$ entlädt.
+
+4. Unter Verwendung der Entladestromgleichung des Kondensators $I = -CdV_{out}/dt$ und der KCL:
+   $$
+   -C_L \frac{dV_{out}}{dt} = \frac{V_{out}}{R_2}
+   \quad\Longrightarrow\quad
+   dt = -R_2 C_L \frac{dV_{out}}{V_{out}}.
+   $$
+
+5. Integrieren wir beide Seiten von $t=0$ mit $V_{out}(0)=V_{DD}$ bis zum Zeitpunkt $t$ mit der Spannung $V_{out}$:
+   $$
+   \int_0^t dt = -R_2 C_L \int_{V_{DD}}^{V_{out}} \frac{dV_{out}}{V_{out}}
+   \quad\Longrightarrow\quad
+   t = -R_2 C_L \ln\frac{V_{out}}{V_{DD}}.
+   $$
+
+6. Für den Zielwert $V_{out}=V_{DD}/2$ ergibt sich
+   $$
+   t = -R_2 C_L \ln\frac{1/2}{1} = R_2 C_L \ln 2.
+   $$
+
+7. Das Verhältnis der beiden Verzögerungen (a) zu (b) ist daher
+   $$
+   \frac{R_1 C_L \ln 2}{R_2 C_L \ln 2} = \frac{R_1}{R_2}.
+   $$
+
+## Aufgabe 1.9 & 1.10
+1. Diese beiden Aufgaben sind einfache mathematische Probleme. Bitte versuchen Sie, sie selbst zu verstehen, und vergleichen Sie Ihre Lösung mit den offiziellen Musterlösungen. Falls Sie Fragen haben, schreiben Sie mir oder meinem Kollegen eine E-Mail.
