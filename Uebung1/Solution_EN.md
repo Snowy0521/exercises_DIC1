@@ -128,4 +128,81 @@
 
 8. Notation: $^n{Q}$ denotes the **new Q state**, while $^a{Q}$ denotes the **old Q state**.
 
+## Task 1.5
 
+1. For **Task (a)** (as shown in the diagram), the JK flip-flop can be constructed using two 3-input NAND gates and one RS latch.
+2. When **clk = 0**, both **R** and **S** are set to 1, and $^n{Q} =\ ^a{Q}$.
+3. When **clk** transitions from 0 to 1 (rising edge), the output $^n{Q}$ is determined by the input signals **J** and **K**.
+4. The specific state transitions can be seen from its **switching table**.
+5. In this switching table (excluding **clk**), there are four input signals: $\overline{^a{Q}},\ ^a{Q},\ J,\ K$; two intermediate signals: **R**, **S**; and two output signals: $^n{Q},\ \overline{^n{Q}}$.
+6. The four input signals correspond to 8 possible signal combinations.
+7. Each signal combination corresponds to a specific **R-S** combination.
+8. Finally, based on **R**, **S**, $\overline{^a{Q}}$, and $^a{Q}$, we can get the outputs $^n{Q}$ and $\overline{^n{Q}}$.
+9. For **Task (b)**, according to the switching table:
+
+   * When **JK = 00**, $^n{Q} = ^a{Q}$
+   * When **JK = 01**, $^n{Q} = 0$
+   * When **JK = 10**, $^n{Q} = 1$
+   * When **JK = 11**, $^n{Q} = \overline{^a{Q}}$
+
+
+## Task 1.6
+
+1. According to the capacitor equations for charge and current:
+   $$Q = C V \quad \text{and} \quad I = \frac{dQ}{dt}$$
+   Therefore:
+   $$I = \frac{dQ}{dt} = C \frac{dV}{dt} = C \frac{\Delta V}{\Delta t} = \dots$$
+
+
+## Task 1.7
+1. We consider the voltage across the capaitor as $V_{out}$
+2. According to Kirchoff's Voltage LAW and the the capacitor current equation $I = CdV/dt$
+    + $$V_{in} = IR + V_{out} \\ = RCdV_{out}/dt + V_{out}$$
+    + $$\frac{V_{in}-V_{out}}{R} = C \frac{dV_{out}}{dt}$$
+    + $$dt = RC \frac{dV_{out}}{V_{in}-V_{out}}$$
+    + Integrating both sides give: $$\int_{0}^{t} dt = RC \int_{0}^{V_{out}}\frac{dV_{out}}{V_{in}-V_{out}}$$
+    + $$t = RC \ln(V_{in}-V_{out})\big|_0^{V_{out}}$$
+    + $$t = -RC \ln\frac{V_{in}-V_{out}}{V_{in}}$$
+
+## Task 1.8
+
+1. For task (a) we take $V_{in}=V_{DD}$. Let $V_{out}$ be the voltage across the capacitor $C_L$.
+
+2. This is the same RC charging circuit as in Task 1.7, so apply the formula:
+   $$
+   t = -RC\ln\frac{V_{in}-V_{out}}{V_{in}}
+   $$
+   Replacing $V_{in}=V_{DD}$ and the target $V_{out}=V_{DD}/2$:
+   $$
+   t = -R_1 C_L \ln\frac{V_{DD}-V_{DD}/2}{V_{DD}} = -R_1 C_L \ln\frac{1}{2} = R_1 C_L \ln 2.
+   $$
+
+3. For task (b) consider the capacitor initially charged to $V_{DD}$. Let $V_{out}$ be the voltage across resistor $R_2$ while the capacitor discharges through $R_2$.
+
+4. Using the capacitor discharge current $I = -CdV_{out}/dt$ and KCL:
+  $$
+  -C_L \frac{dV_{out}}{dt} = \frac{V_{out}}{R_2}
+  \quad\Longrightarrow\quad
+  dt = -R_2 C_L \frac{dV_{out}}{V_{out}}.
+  $$
+
+5. Integrate both sides from $t=0$ with $V_{out}(0)=V_{DD}$ to time (t) with voltage $V_{out}$:
+   $$
+   \int_0^t dt = -R_2 C_L \int_{V_{DD}}^{V_{out}} \frac{dV_{out}}{V_{out}}
+   \quad\Longrightarrow\quad
+   t = -R_2 C_L \ln\frac{V_{out}}{V_{DD}}.
+   $$
+
+6. For the target $V_{out}=V_{DD}/2$ we get
+   $$
+   t = -R_2 C_L \ln\frac{1/2}{1} = R_2 C_L \ln 2.
+   $$
+
+7. The ratio of the two delays (a) over (b) is therefore
+   $$
+   \frac{R_1 C_L \ln 2}{R_2 C_L \ln 2} = \frac{R_1}{R_2}.
+   $$
+
+## Task 1.9 & 1.10
+
+1. These two tasks are simple mathematical problems. Please try to understand them on your own and refer to the official reference solutions. If you have any questions, please email me or my colleagues.
