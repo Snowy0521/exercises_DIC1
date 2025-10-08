@@ -1,3 +1,7 @@
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
 ## Task 1.1
 1. 首先我们需要知道什么是NAND Gate：
     + 他的Symbol是...
