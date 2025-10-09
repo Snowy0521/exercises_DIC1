@@ -84,9 +84,9 @@
    * Given $F = \overline{A} \ \overline{B} \ C \lor \overline{A} \ B \ \overline{C} \lor A \ B \ \overline{C}$
    * Its complement is:
      $$\overline{F} = \overline{\overline{A} \ \overline{B} \ C \lor \overline{A} \ B \ \overline{C} \lor A \ B \ \overline{C}}$$
-   * If the exam question does not require the logical expression to be simplified into DNF, you may stop here.
+   * If the exam question does not require the logical expression to be simplified, you may stop here.
 
-3. If $\overline{F}$ needs to be in DNF:
+3. If $\overline{F}$ needs to be simplified:
 
    * Using **De Morgan's law** ($\overline{A \land B} = \overline{A} \lor \overline{B}$):
      $$\overline{F} = \overline{\overline{A} \ \overline{B} \ C \lor \overline{A} \ B \ \overline{C} \lor A \ B \ \overline{C}} \\ = \overline{\overline{A} \ \overline{B} \ C} \land \overline{\overline{A} \ B \ \overline{C}} \land \overline{A \ B \ \overline{C}} \\ = (\overline{\overline{A}} \lor \overline{\overline{B}} \lor \overline{C}) \land (\overline{\overline{A}} \lor \overline{B} \lor \overline{\overline{C}}) \land (\overline{A} \lor \overline{B} \lor \overline{\overline{C}})$$
