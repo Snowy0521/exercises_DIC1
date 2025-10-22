@@ -13,7 +13,7 @@
 
 
 ## Task 2.2
-1. The structure and symbol of an NMOS transistor can we find in reference book figure 2.1, so I won't drawn it here.
+1. The structure and symbol of an NMOS transistor can we find in reference book (Analysis and Design of Digital Integrated Circuits from Hodges) figure 2.1, so I won't drawn it here.
 2. Initially, the circuit is in an unstable state: as $V_{GS}$ increases, the NMOS enters the linear or saturation region, and $V_{OL}$ decreases from $V_{DD}$ to 0 V
 3. Due to parasitic capacitances $C_{DS}$ and $C_{GD}$, if $V_{OL}$ changes within a very short time for example, tens of nanoseconds, a large transient current will be generated according the capacitor current equation.
 4. The steady state means the drain voltage becomes stable, where $$I_{DC} = \frac{V_{DD}}{R_L + R_{on}} \frac{V_{DD}-V_{OL}}{R_L}$$, the $I_{DC}$ represents a pure resistive current.  
