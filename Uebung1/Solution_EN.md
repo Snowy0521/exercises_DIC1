@@ -71,9 +71,6 @@
 ## Task 1.2
 1. This task is the same as the previous one. you need to rewrite the logical expression using NAND gates and then draw the corresponding circuit.
 
-2. Therefore, because of time constraints, I will not provide detailed explanations here. 
-
-3. Please complete the task on your own and compare it with the reference answer. If you have any questions, please email me or my colleagues.
 
 ## Task 1.3
 
