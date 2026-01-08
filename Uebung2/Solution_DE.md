@@ -17,7 +17,7 @@
 1. Die Struktur und das Symbol eines NMOS können im Referenzbuch im Abbildung 2.1 gefunden, deswegen zeichne ich hier nicht mehr.
 2. Am Anfang befindet sich die Schaltung in einem instabilen Zustand: Wenn $V_{GS}$ steigt, tritt der NMOS in den linearen oder Sättigungsbereich ein, und $V_{OL}$ fällt von 5 V to 1 V.
 3. Aufgrund parasitärer Kapazitäten $C_{DS}$ und $C_{GD}$, wenn $V_{OL}$ fällt innerhalb sehr kurzer Zeit z.B. einige zehn Nanosekunden, ein großer transitorischer Strom wird erzeugt gemäß der Kapazitorstromgleichung.
-4. Der stationäre Zustand bedeutet, dass die Drain Spannung stabil wird, wobei $$I_{DC} = \frac{V_{DD}}{R_L + R_{on}} \frac{V_{DD}-V_{OL}}{R_L}$$ gilt, $I_{DC}$ stellt einen rein ohmischen Strom dar.
+4. Der stationäre Zustand bedeutet, dass die Drain Spannung stabil wird, wobei $$I_{DC} = \frac{V_{DD}}{R_L + R_{on}} = \frac{V_{DD}-V_{OL}}{R_L}$$ gilt, $I_{DC}$ stellt einen rein ohmischen Strom dar.
 
 ## Task 2.3
 ### a)

@@ -1,47 +1,44 @@
 ## Task 3.1
 ### a)
 1. According to equation (2.11) of the reference book $$V_{T0} = \phi_{GC} - 2\phi_F - \frac{Q_{B0}}{C_{ox}} - \frac{Q_{ox}}{C_{ox}}$$
-2. For NMOS: $$V_{T0n} = \phi_{GC} - 2\phi_{Fp} - \frac{Q_{B0}}{C_{ox}} - \frac{Q_{ox}}{C_{ox}}$$
-    + $$\phi_{GC} = \phi_{Fp} - \phi_{G} = ( -0.44 - 0.55 ) \mathrm{V} = -0.99  \mathrm{V}$$
-    + $$2\phi_{Fp} = -0.88 \mathrm{V}$$
-    + $$\frac{Q_{B0}(\text{elctrons})}{C_{ox}} = \frac{- \sqrt{2qN_A \epsilon_{si}|-2\phi_F|}}{\frac{\epsilon_{ox}}{t_{ox}}} = -0.188 \mathrm{V}$$
-    + $$\frac{Q_{ox}}{C_{ox}} = \frac{N_{SS}q}{C_{ox}} = 0.06 \mathrm{V}$$
+2. For NMOS ($n^+$ doped): $$V_{T0n} = \phi_{GC} - 2\phi_{Fp} - \frac{Q_{B0}}{C_{ox}} - \frac{Q_{ox}}{C_{ox}} = %0.02 \mathrm{V}$$
+    + $$\phi_{GC} = \phi_{Fp} -   0.55 \mathrm{V} = %-0.99  \mathrm{V}$$
+    + $$2\phi_{Fp} = %-0.88 \mathrm{V}$$
+    + $$\frac{Q_{B0}(\text{elctrons})}{C_{ox}} = \frac{- \sqrt{2qN_A \epsilon_{si}|-2\phi_F|}}{\frac{\epsilon_{ox}}{t_{ox}}} =% -0.188 \mathrm{V}$$
+    + $$\frac{Q_{ox}}{C_{ox}} = \frac{N_{SS}q}{C_{ox}} = %0.06 \mathrm{V}$$
 
-3. For PMOS: $$V_{T0p} = \phi_{GC} - 2\phi_{Fn} - \frac{Q_{B0}}{C_{ox}} - \frac{Q_{ox}}{C_{ox}}$$
-    + $$\phi_{GC} = \phi_{Fn} - \phi_{G} = (0.44 - (-0.55) ) \mathrm{V} = 0.99  \mathrm{V}$$
-    + $$2\phi_{Fn} = 0.88 \mathrm{V}$$
-    + $$\frac{Q_{B0}(\text{holes})}{C_{ox}} = \frac{+ \sqrt{2qN_A \epsilon_{si}|-2\phi_F|}}{\frac{\epsilon_{ox}}{t_{ox}}} = 0.188 \mathrm{V}$$
-    + $$\frac{Q_{ox}}{C_{ox}} = \frac{N_{SS}q}{C_{ox}} = 0.06 \mathrm{V}$$
+3. For PMOS ($p^+$ doped): $$V_{T0p} = \phi_{GC} - 2\phi_{Fn} - \frac{Q_{B0}}{C_{ox}} - \frac{Q_{ox}}{C_{ox}}$$
+    + $$\phi_{GC} = \phi_{Fn} + 0.55 \mathrm{V} = % 0.99  \mathrm{V}$$
+    + $$2\phi_{Fn} = % 0.88 \mathrm{V}$$
+    + $$\frac{Q_{B0}(\text{holes})}{C_{ox}} = \frac{+ \sqrt{2qN_A \epsilon_{si}|-2\phi_F|}}{\frac{\epsilon_{ox}}{t_{ox}}} = %0.188 \mathrm{V}$$
+    + $$\frac{Q_{ox}}{C_{ox}} = \frac{N_{SS}q}{C_{ox}} = %0.06 \mathrm{V}$$
 
 ### b)
 1. donors are elctrons, acceptors are holes 
-2. If a PMOS gate is doped with electrons instead of acceptors:
-$$\phi_{GC} = \phi_{Fn} - \phi_{G} = (0.44 - 0.55)  \mathrm{V} = -0.11  \mathrm{V}$$
-3. The new $V_{T0p} = (-0.11 \mathrm{V}) - (0.88 \mathrm{V}) - (0.188 \mathrm{V}) - (0.06 \mathrm{V}) = -1.24 \mathrm{V}$
-4. Notation: 
-    + For NMOS, it has P-substrate, $\phi_{Fp} < 0$, i.e., $\phi_{Fp} = -0.44 \mathrm{V}$:
-        + If its gate is doped with elctrons $\phi_G = 0.55 \mathrm{V}$
-        + If its gate is doped with holes $\phi_G = -0.55 \mathrm{V}$
-    + For PMOS, it has N-substrate, $\phi_{Fn} > 0$, i.e., $\phi_{Fn} = 0.44 \mathrm{V}$:
-        + If its gate is doped with elctrons $\phi_G = 0.55 \mathrm{V}$
-        + If its gate is doped with holes $\phi_G = -0.55 \mathrm{V}$
+2. If a PMOS gate is doped with electrons (PMOS $n^+$ doped):
+$$\phi_{GC} = \phi_{Fn}  - 0.55 \mathrm{V} = % -0.11  \mathrm{V}$$
+3. The new $V_{T0p} = (\phi_{GC}) - (0.88 \mathrm{V}) - (0.188 \mathrm{V}) - (0.06 \mathrm{V}) = %-1.24 \mathrm{V}$
+
 
 ### c)
 1. Calculate the amount implanted icons per square centmeter to reach the desired $V_{T0n} = 0.4 \mathrm{V}$ and $V_{T0p} = -0.4 \mathrm{V}$
-2. According the capacitor voltage equation: $$Q = q \times N_I = C_{ox} \times (V_d-V_a)$$
-
+2. According the capacitor voltage equation: $$Q = q  N_I = C_{ox}  (V_d-V_a) \\ \to N_I = \frac{C_{ox}}{q}(V_d - V_a)$$
+3. NMOS: $$N_I = (10^{13}V^{-1}cm^{-2})(0.4V-0.02V) = %3.8 \cdot 10^{12} cm^{-2}$$
+4. PMOS: $$N_I = (10^{13}V^{-1}cm^{-2})(-0.4V-(-0.14)V) = %-2.6 \cdot 10^{12} cm^{-2}$$
+5. New PMOS: $$N_I = (10^{13}V^{-1}cm^{-2})(-0.4V-(-1.24)V) = %8.4 \cdot 10^{12} cm^{-2}$$
 ### d)
 1. To make sure that absolute value of threshold voltage isn't greater than $V_{DD}$
 2. With $0.13 \mathrm{\mu m}$ technology node, the supply voltage $V_{DD} = 1.2 \mathrm{V}$
 
 ### e)
-1. According to the equation (2.21) on page 59 of reference book:
-    $$\mu_e = \frac{\mu_0}{1 + (\frac{V_{GS}- V_{T}}{\theta \cdot t_{ox}})^{\eta}}$$
-    + given the nomimal mobility $\mu_0 = 130 \mathrm{cm}^2\mathrm{V}^{-1}\mathrm{s}^{-1}$
+1. According to the equation (2.21) on page 59 of reference book, the effective mobility $\mu_e$
+    $$\mu_e = \frac{\mu_0}{1 + (\frac{V_{GS}- V_{T}}{\theta \cdot t_{ox}})^{\eta}} = % 71 cm^2V^{-1}s^{-1}$$
+    + given the nominal mobility $\mu_0 = 130 \mathrm{cm}^2\mathrm{V}^{-1}\mathrm{s}^{-1}$
     + $\theta = 4 \cdot 10^6 \mathrm{Vcm}^{-1}$
     + $\eta = 1.85$
     + In the $0.13 \mathrm{\mu m}$ technology, the thickness of the oxide $t_{ox} = 22 \text{\r{A}} = 22 \times 10^{-8} \mathrm{cm} $
-    + $V_{GS} - V_{T} = 1.2 \mathrm{V} - 0.4 \mathrm{V} = 0.8 \mathrm{V}$
+    + For NMOS: $V_{GS} - V_{T} = 1.2 \mathrm{V} - 0.4 \mathrm{V} = 0.8 \mathrm{V}$
+    + For PMOS: $V_{SG} - |V_{T}| = 1.2 \mathrm{V} - 0.4 \mathrm{V} = 0.8 \mathrm{V}$
 
 ## Task 3.2
 ### a)
