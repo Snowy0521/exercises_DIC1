@@ -112,7 +112,7 @@
    + we define $$\alpha = \frac{V_{DD}- V_{TN}}{V_{DD}} $$
    + for worst case: 
      + $$W_p \cdot C_{\text{eff}} = 2\mathrm{W} \cdot (2\cdot C_j + 2\cdot C_{ol} + C_{ol}(1 + 1)) = 4 \mathrm{W} \cdot C_{\text{eff}}$$
-     + $$W_n \cdot C_{\text{eff}} = (C_j + C_{ol}) \cdot (3\mathrm{W}) \\ + (C_j + 3\cdot C_{ol}) \cdot (3\mathrm{W})\alpha \\ + (C_{ol})\cdot(3W)(1 + \alpha) \\ =  C_{\text{eff}} \cdot (9 \mathrm{W} - 6 \mathrm{W} (V_{TN}/V_{DD})) $$
+     + $$W_n \cdot C_{\text{eff}} = (C_j + C_{ol}) \cdot (3\mathrm{W}) \\ + (2\cdot C_j + 3\cdot C_{ol}) \cdot (3\mathrm{W})\alpha \\ + (C_{ol})\cdot(3W)(1 + \alpha) \\ =  C_{\text{eff}} \cdot (9 \mathrm{W} - 6 \mathrm{W} (V_{TN}/V_{DD})) $$
      + $$C_{\text{self}} = W_n \cdot C_{\text{eff}} + W_p \cdot C_{\text{eff}} = C_{\text{eff}} \cdot (13 \mathrm{W} - 6 \mathrm{W} (V_{TN}/V_{DD}))$$
 
 ## Task 8.6 

@@ -56,7 +56,7 @@
 
 ### 2 to 1 MUX using TG
 
-<img src="./images/figure7.9-2to1MUX.png" width="400px">
+<img src="./images/figure7.9-2to1MUX.png" width="500px">
 
 + if S = 1, upper TG is on, F = A 
 + if S = 0, lower TG is on, F = B 
