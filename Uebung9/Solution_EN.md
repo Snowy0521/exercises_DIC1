@@ -104,6 +104,7 @@ $$\tau_{\text{delay}} = \sum_i R_i C_i \tag{6.15}$$
    + $$\text{LE}_{\text{nor}} \times \frac{C_{\text{load}}}{C_{j+2}} = 6 \Rightarrow C_{j+2} = 5/3 \times \frac{200 \text{fF}}{6} \approx 55 \text{fF}$$
    + $$\text{LE}_{\text{inv}} \times \frac{C_{j+2}}{C_{j+1}} = 6 \Rightarrow C_{j+1} = 1 \times \frac{55 \text{fF}}{6} \approx 9.1 \text{fF}$$
    + $$\text{LE}_{\text{nand}} \times \frac{C_{j+1}}{C_{\text{in}}} = 6 \Rightarrow C_{\text{in}} = 4/3 \times \frac{9.1 \text{fF}}{6} \approx 2\text{fF}$$
+   + Using $C_{\text{in}} = C_g (W_N + W_P)$ to get the value of $W_N$ and $W_P$ (see task 9.4)
 6. The advantage of LE method?
    + $\text{determination of minimum delay without sizing the gates}$
 ---
@@ -117,6 +118,7 @@ $$\tau_{\text{delay}} = \sum_i R_i C_i \tag{6.15}$$
   + $$\text{LE}_{\text{nand}} \times \frac{C_{Z}}{C_{Y}} = 1.45 \Rightarrow C_{Y} = 4/3 \times \frac{13.8 \text{fF}}{1.45} \approx 12.7 \text{fF}$$
   + $$\text{LE}_{\text{nor}} \times \frac{C_{Y}}{C_{X}} = 1.45 \Rightarrow C_{X} = 5/3 \times \frac{12.7 \text{fF}}{1.45} \approx 14.5 \text{fF}$$
   + $$\text{LE}_{\text{inv}} \times \frac{C_{X}}{C_{\text{in}}} = 1.45 \Rightarrow C_{\text{in}} = 1 \times \frac{14.5 \text{fF}}{1.45} = 10 \text{fF}$$
+  + Using $C_{\text{in}} = C_g (W_N + W_P)$ to get the value of $W_N$ and $W_P$ (see task 9.4)
 ---
 ## Task 9.7 
 ### a)
